@@ -6,7 +6,7 @@
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 15:09:18 by jrossett          #+#    #+#             */
-/*   Updated: 2021/12/15 14:09:08 by jrossett         ###   ########.fr       */
+/*   Updated: 2021/12/15 15:55:54 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,13 +23,15 @@ void	ft_putstr(char *s, int *i)
 	int	j;
 
 	j = 0;
-	if (s)
+	if (!s)
 	{
-		while (s[j])
-		{
-			write(1, &s[j++], 1);
-			*i += 1;
-		}
+		ft_putstr("(null)", i);
+		return ;
+	}
+	while (s[j])
+	{
+		write(1, &s[j++], 1);
+		*i += 1;
 	}
 }
 

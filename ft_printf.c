@@ -6,7 +6,7 @@
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 15:02:35 by jrossett          #+#    #+#             */
-/*   Updated: 2021/12/15 15:28:01 by jrossett         ###   ########.fr       */
+/*   Updated: 2021/12/15 16:03:51 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ void	ft_putnbr_base(unsigned long n, const char *base, int *i)
 	size_t	j;
 
 	j = ft_strlen(base);
-	if (n > 0 && n < j)
+	if (n < j)
 		ft_putchar(base[n], i);
 	else
 	{
@@ -45,7 +45,7 @@ void	ft_pointeur(void *str, int *i)
 	unsigned long int	p;
 
 	p = (unsigned long int)str;
-	if (!p)
+	if (p == 0)
 	{
 		ft_putstr(NULL_PTR, i);
 		return ;
@@ -69,9 +69,9 @@ void	ft_args(const char	*str, va_list args, int *i)
 		if (*str == '%' && *(str + 1) == 'u')
 			ft_putnbr_us(va_arg(args, unsigned int), i);
 		if (*str == '%' && *(str + 1) == 'x')
-			ft_putnbr_base(va_arg(args, int), HEXA, i);
+			ft_putnbr_base(va_arg(args, unsigned int), HEXA, i);
 		if (*str == '%' && *(str + 1) == 'X')
-			ft_putnbr_base(va_arg(args, int), CHEXA, i);
+			ft_putnbr_base(va_arg(args, unsigned int), CHEXA, i);
 		if (*str == '%' && *(str + 1) == '%')
 			ft_putchar(*str, i);
 		if (*str == '%')
