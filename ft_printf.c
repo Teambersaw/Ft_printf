@@ -6,11 +6,10 @@
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 15:02:35 by jrossett          #+#    #+#             */
-/*   Updated: 2021/12/15 16:03:51 by jrossett         ###   ########.fr       */
+/*   Updated: 2021/12/16 13:56:07 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "ft_printf.h"
 
 size_t	ft_strlen(const char *s)
@@ -93,15 +92,3 @@ int	ft_printf(const char *str, ...)
 	va_end(args);
 	return (i);
 }
-/*
-int	main(void)
-{
-	int i;
-	char *str = 0;
-
-	i = 0;
-	printf("%p\n", str);
-	ft_pointeur(str, &i);
-	return (0);
-}
-*/

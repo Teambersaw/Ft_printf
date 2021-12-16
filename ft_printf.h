@@ -6,7 +6,7 @@
 /*   By: jrossett <jrossett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 17:00:52 by teambersaw        #+#    #+#             */
-/*   Updated: 2021/12/15 15:55:57 by jrossett         ###   ########.fr       */
+/*   Updated: 2021/12/16 13:56:22 by jrossett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 # include <unistd.h>
 # include <stdarg.h>
 
-# define NULL_PTR "(nil)"
+# define NULL_PTR "0x0"
 
 int		ft_printf(const char *str, ...);
 void	ft_putchar(char c, int *i);
