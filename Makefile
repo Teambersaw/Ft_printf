@@ -3,7 +3,7 @@ CC = gcc
 
 CFLAGS = -Wall -Wextra -Werror
 
-SRCS = test.c \
+SRCS = ft_printf.c ft_printf.utils.c \
 
 OBJS = ${SRCS:.c=.o}
 
